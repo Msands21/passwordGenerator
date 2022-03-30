@@ -1,2 +1,0 @@
-# passwordGenerator
-JS HW UCF
