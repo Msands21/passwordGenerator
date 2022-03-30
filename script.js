@@ -24,14 +24,20 @@ generateBtn.addEventListener("click", writePassword);
 
 // Need to get user responses aka prompts
 function getInput(){
-    userChars = [];
-    passwordLength = (prompt("How many characters do you want your password to be? (Min 8 Max 128)"));
-// I want these responses to be false to move on with prompts
+  var userChars = [];
+  var passwordLength = parseInt(prompt("How many characters do you want your password to be? (Min 8 Max 128)"));
+
+    // I want these responses to be false to move on with prompts
     if ( passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength) ) {
       alert("Password length must be between 8 - 128 digits and a number. Please re-submit");
       return false;
     }
-
+    //True or false (okay / cancel) responses will be stored in userChars and combined with concat
+    if (confirm("Would you like special characters in your password?")) {
+      userChars = userChars.concat(specialChars);
+    }
+    
+  
     
 }
 
