@@ -11,7 +11,7 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 //Array based on user responses
 var userChars = [];
 //Password length
-var passwordLength = 10
+var passwordLength = 0
 
 // Assignment Code and Prompts for PW options
 var generateBtn = document.querySelector("#generate");
@@ -21,8 +21,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Need to get user responses aka prompts
 function getInput(){
-  var userChars = [];
-  var passwordLength = parseInt(prompt("How many characters do you want your password to be? (Min 8 Max 128)"));
+  passwordLength = parseInt(prompt("How many characters do you want your password to be? (Min 8 Max 128)"));
 
     // I want these responses to be false to move on with prompts
     if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
