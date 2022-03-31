@@ -39,6 +39,9 @@ function getInput(){
     if (confirm("Would you like numbers in your password?")) {
       userChars = userChars.concat(numberChars);
     }
+    if (confirm("Would you like uppercase letters in your password?")) {
+      userChars = userChars.concat(uppercase);
+    }
   
     
 }
