@@ -21,6 +21,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Need to get user responses aka prompts
 function getInput(){
+  userChars = [];
   passwordLength = parseInt(prompt("How many characters do you want your password to be? (Min 8 Max 128)"));
 
     // I want these responses to be false to move on with prompts
